@@ -4,8 +4,11 @@
 	padding: 0;
 	scroll-behavior: smooth;
 	-webkit-user-select: none;
+}
+
+body {
 	text-align: center;
-	font-family: sans-serif;
+	font-family: "Exo 2",sans-serif;
 }
 
 .odd-container , .even-container {
@@ -32,13 +35,14 @@ img.profile {
 	height: 280px;
 	width: 280px;
 	border-radius: 50%;
-	margin: 8% 0 10px 0; 
+	margin: 7% 0 30px 0; 
+	box-shadow: 0px 5px 30px 10px black;
 } 
 
 .titles{
 	margin: 50px 100px; 
-	font-size: 35px;
-	font-family: sans-serif;
+	font-size: 39px;
+	font-family: "Exo 2", sans-serif;
 	font-weight: bold;
 	animation: fadeInBottom 2s forwards;
 
@@ -46,13 +50,13 @@ img.profile {
 
 #name {
 	width: 305px;
-	font-size: 28px;
+	font-size: 31px;
 	margin: auto;
 }
 
 .line {
 	width: 100%;
-	height: 3px;
+	height: 2px;
 	background : #00e677;
 	position: relative;
 }
@@ -118,6 +122,7 @@ img.profile {
 	background-color: #fff;
 	padding: 7px;
 	border-radius: 50%;
+	box-shadow: 0px 1px 20px 5px black;
 	animation: fadeIn 1s forwards;
 	animation-delay: 1.3s;
 }
@@ -130,6 +135,7 @@ img.profile {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .arrow span{
 	visibility: hidden;
 	display: block;
@@ -162,6 +168,50 @@ img.profile {
         transform: rotate(45deg) translate(20px,20px);
     }
 }
+
+/* arrow-up */
+
+.arrowup{
+	display: inline-block;
+	margin-top: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.arrowup span{
+	visibility: hidden;
+	display: block;
+	width: 20px;
+    height: 20px;
+    border-bottom: 5px solid #00e677;
+    border-right: 5px solid #00e677;
+    transform: rotate(-45deg);
+    margin: -10px;
+    animation: animatesup 2s infinite;
+    animation-delay: 2.0s;
+}
+.arrowup span:nth-child(2){
+    animation-delay: 2.2s;
+}
+.arrowup span:nth-child(3){
+    animation-delay: 2.4s;
+}
+@keyframes animatesup {
+    0%{
+        opacity: 0;
+        transform: rotate(-135deg) translate(-50px,-50px);
+    	visibility: visible;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(-135deg) translate(-10px,-10px);
+    }
+}
+
 /*end of arrow css */
 
 /*About me */
@@ -174,7 +224,8 @@ img.profile {
 p.aboutMe{
 	visibility: hidden;
 	font-size: 23px; 
-	font-family: 'Source Code Pro', monospace;
+	font-family: "Exo 2",sans-serif;
+	word-spacing: 10px;
 	font-weight: 500;
 	text-align: justify;
 	margin: auto;
@@ -183,56 +234,164 @@ p.aboutMe{
 	animation-delay: 1s;
 }
 
+.aboutMe a {
+	color: #1a1a1a;
+	text-decoration: none;
+} 
+
 #skills {
-	width: 337px;
+	width: 410px;
 	display: inline-block;
 }
 
-.boxes {
+div.boxes {
 	visibility: hidden;
 	animation: fadeIn 1s forwards;
-	animation-delay: 1.5s;
+	animation-delay: 1.2s;
 }
 
 .boxes span{
 	display: inline-block;
 	background-color: #1a1a1a;
-	margin-left: 50px;
-	border: 1px solid white;
-	height: 400px;
-	width: 300px;
+	margin: 50px 25px 50px 25px;
+	height: 300px;
+	width: 200px;
+	box-shadow: 2px 2px 10px black;
 }
 
 .boxes img {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	margin: 30px;
 }
 
 .boxes section {
-	width: 60%;
-	margin: 5% 20%
+	width: 70%;
+	margin: 5% 15%;
 }
 
 .boxes p {
+	font-family: sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 }
 
 #projects {
 	width: 200px;
-	display: inline-block;
+	display: inline-block; 
+}
+
+.coming_soon {
+	visibility: hidden;
+	margin-top: 120px;
+	font-size: 100px;
+	color: #666;
+	font-family: "Exo 2", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	animation: fadeIn 1s forwards;
+	animation-delay: 1s;
+}
+
+
+#period {
+	margin-left: -10px;
+	font-family: "Avenir next";
+	font-weight: bold;
+	color: #00e677;
 }
 
 #contact {
-	width: 335px;
+	width: 355px;
 	display: inline-block;
+
+}
+
+.container {
+	padding: 0 30%;
+	visibility: hidden;
+	animation: fadeIn 1s forwards;
+	animation-delay: 1s;
+}
+
+input, textarea {
+	width: 100%;
+	font-size: 16px;
+	padding: 12px;
+	margin: 20px 0 20px 0;
+	color: #fff;
+	background-color: #10100a;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	box-shadow: 5px 5px 10px black; 
+	transition: 0.3s;
+	outline: none;
+	
+}
+
+textarea {
+	height: 150px;
+	resize: none;
+}
+
+input:focus,textarea:focus {
+	border: 1px solid #00e677;
+	box-shadow: 0.5px 0.5px 10px #00e677;
+}
+
+#send {
+	background-color: #fff;
+	color: #10100a;
+	height: 40px;
+	width: 100px;
+	border: none;
+	border-radius: 6px;
+	outline: none;
+
+}
+
+#sendi {
+	height: 13px;
+	width: 13px;
+}
+
+#send:active {
+	color: #000;
+	background-color: #999;
+
+}
+
+.container p,.container a {
+	margin: 20px 0 0 0;
+	color: #e6e6e6;
+}
+
+.container a:hover {
+	color: #fff;
+}
+
+#section-6 {
+	height: 100%;
+}
+
+
+
+footer, hr {
+	visibility: hidden;
+	padding: 20px 0;
+	animation: fadeIn 1s forwards;
+	animation-delay: 1s;
+}
+
+hr {
+	padding: 0;
+	margin-top: 10%;
+	color: #ccc;
 }
 
 .fadeIn {
 	visibility: hidden;
 	animation: fadeIn 1.5s forwards;
-	
 }
 
 .fadeInBottom {

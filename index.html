@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="English">
 
 <head>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Prathamesh Punde</title>
-	<link rel="javascript" href="js/script.js">
 	<link href="css/stylesheet.css" rel="stylesheet">
+	
+	
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+	
+	<script type="text/javascript"
+	  	src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+  		
+  		</script>
+
+
 
 </head>
 
@@ -72,12 +84,14 @@
 			<div class="centerLine"></div>
 		</div>
 
-		<p class="aboutMe fadeInBottom">
+		<p class="aboutMe">
 			Hey there!<br><br>
 
-			I'm Prathamesh Punde, a student pursuing Diploma in Computer Engineering. A beginner in web development, and a tech bug.
+			I'm Prathamesh Punde, a student pursuing Diploma in Computer Engineering, a newbee in web development, and a tech addict.
 			<br><br>
-			 This is one of the initial works of mine. This portfolio is a showcase of what I can do and help people to connect with me. Drop a respone in the Connect with me section below if you like my work or have any suggestions. I would love to hear from you!
+			 This is one of the initial works of mine. This portfolio is a showcase of what I can do and help people to connect with me. I will add more content to it soon with time. Drop a respone in the 
+			 <a href="#section-5">Connect with me</a> 
+			 section below if you like my work or have any suggestions. I would love to hear from you!
  		</p>
 
 	</div>
@@ -85,7 +99,7 @@
 	
 	<div class="odd-container" id="section-3" >
 		
-		<div class="titles" id="skills">TECHNICAL SKILLS
+		<div class="titles" id="skills">PROGRAMMING SKILLS
 			<div class="centerLine"></div>
 
 		</div>
@@ -113,7 +127,20 @@
 				<p>JAVASCRIPT</p>
 			</span>
 
+			<span>
+				
+				<img src="images/java.png">
+				<section class="line"> </section>
+				<p>JAVA</p>
 
+			</span>
+			<span>
+				
+				<img src="images/c++.png">
+				<section class="line"> </section>
+				<p>C/C++</p>
+
+			</span>
 		</div>
 
 	</div>
@@ -126,6 +153,14 @@
 
 		</div>
 
+		<p class="coming_soon">
+			
+			<span id="coming">COMING</span>
+			<span id="soon">SOON</span>
+			<span id="period">.</span>
+
+		</p>
+
 	</div>
 
 
@@ -135,6 +170,119 @@
 			<div class="centerLine"></div>
 
 		</div>
+
+		<div class="container">
+
+			<form id="form">
+		
+				<input type="text" name="name" id="from_name" placeholder="Name" required/>
+
+				<input type="email" name="mail" id="email" placeholder="Email" required/>
+
+				<textarea id="message" placeholder="Type a message..." required></textarea>
+
+				<button type="submit" value="Send" id="send" class="pre-done">
+				
+				<img id="sendi" src="images/send.png">
+				<span id="btext">Send</span>
+				
+				</button>
+
+			</form>
+
+			<p>
+
+			or post an anonymous response 
+
+			<a href="http://qooh.me/prathamesh_2002" target="_blank">qooh.me!</a>
+
+			</p>
+
+		</div>	
+
+	</div>
+
+	<div class="odd-container" id="section-6" >
+
+		<div class="arrowup">
+			<a href="#home">
+ 				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>	
+
+		<hr>
+		<footer>
+		
+		Developed and Designed by Prathamesh Punde.
+		Licensed under MIT.
+		&copy; 2020 Prathamesh Punde.
+
+		</footer>
+
+		
+		<script type="text/javascript">
+  		
+  		emailjs.init('user_joXljjqqBz2oedqlRwY9U');
+  		document
+				.querySelector("#form")
+				.addEventListener("submit", function (event) {
+					event.preventDefault();
+
+					document.querySelector(
+									"#send"
+								).innerHTML = "Sending...";
+
+					var name1 = document
+						.querySelector("#form")
+						.getElementsByTagName("input")[0].value;
+					var email1 = document
+						.querySelector("#form")
+						.getElementsByTagName("input")[1].value;
+					var message1 = document
+						.querySelector("#form")
+						.getElementsByTagName("textarea")[0].value;
+
+					var element = document.getElementById("#send");
+
+					var templateParams = {
+						from_name: name1 ,
+						email: email1 ,
+						message: message1 ,
+					};
+
+					emailjs
+						.send("service_z85sh8v", "template_lxn6ocl", templateParams)
+						.then(
+							function (response) {
+								console.log(
+									"SUCCESS!",
+									response.status,
+									response.text
+								);
+
+								document.querySelector(
+									"#send"
+								).innerHTML = "✔️ Sent";
+
+								document.getElementById("send").style.color = "#fff";
+								document.getElementById("send").style.backgroundColor = "#00e677";
+							},
+							function (error) {
+								console.log("FAILED...", error);
+
+								document.querySelector(
+									"#send"
+								).innerHTML = "❌ Failed";
+
+								document.getElementById("send").style.color = "#fff";
+								document.getElementById("send").style.backgroundColor = "red";
+							}
+						);
+				});
+		
+		</script>
 
 	</div>
 
