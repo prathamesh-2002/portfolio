@@ -6,6 +6,8 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .js-loading *,
@@ -426,6 +428,7 @@ input:focus,textarea:focus {
 .container p,.container a {
 	margin: 20px 0 0 0;
 	color: #e6e6e6;
+	font-size: 16px;
 }
 
 .container a:hover {
@@ -639,6 +642,10 @@ hr {
 	.container {
 		padding: 0 12%;
 		margin: 10% auto;
+	}
+
+	.container p, .container a {
+		font-size: 13px;
 	}
 
 	#section-6 {
