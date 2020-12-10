@@ -1,2 +1,13 @@
-# Portfolio
-Personal portfolio
+# Personal Portfolio
+#### Link:     <br /><br />
+
+#### Icons by: <br />
+[Flaticon](https://www.flaticon.com/)   <br />
+[Icons8](https://icons8.com/)           <br /><br />
+
+#### Library used: <br />
+[EmailJS](https://www.emailjs.com/)     <br />
+
+##### Leave a response on the site if you have any sugggestions!       <br /><br />
+
+###### Note: The site is under development.
