@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html lang="English">
+<html>
 
 <head>
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title>Prathamesh Punde</title>
+	
+	<link rel="icon" href="images/p.png">
+
 	<link href="css/stylesheet.css" rel="stylesheet">
 	
 	
 	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+		
 	
 	<script type="text/javascript"
 	  	src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-  		
-  		</script>
+  	</script>	
 
-
+  	<script src="js/jquery.js"></script>
 
 </head>
 
 <body>
 
+	<div class="loader-wrapper">
+		
+		 <div class="loader">
+   			<label>●</label>
+   			<label>●</label>
+    		<label>●</label>
+    		<label>●</label>
+    		<label>●</label>
+    		<label>●</label>
+  		</div>
+
+	</div>
+
 	<div class="odd-container" id="home" >
 		
-		<img class="profile fadeIn" src="images/avatar.jpg">
-		
-		<div class="titles" id="name">PRATHAMESH PUNDE
+		<div>
+			<img class="profile" src="images/avatar.jpg">
+		</div>
+
+		<div class="titles tHome" id="name">PRATHAMESH PUNDE
 			
-			<div class="centerLine"></div>
+			<div class="hCenterLine"></div>
 			
 			<div class="subtitle">| Web Developer |</div>
 
 		</div>
 
-		<div class="fadeIn links">
+		<div class="links aHome">
 
-				<a href="https://instagram.com/prathamesh__2002" class="links" target="_blank"> 
+				<a href="https://instagram.com/prathamesh__2002" class="" target="_blank"> 
 				
 					<img src="images/instagram.png"  class="icons" class=""> 
 				
@@ -80,18 +95,18 @@
 
 	<div class="even-container" id="section-2">
 		
-		<div class="titles" id="aboutMe">ABOUT ME
+		<div class="titles fadeInBottom" id="aboutMe">ABOUT ME
 			<div class="centerLine"></div>
 		</div>
 
-		<p class="aboutMe">
+		<p class="aboutMe fadeIn">
 			Hey there!<br><br>
 
-			I'm Prathamesh Punde, a student pursuing Diploma in Computer Engineering, a newbee in web development, and a tech addict.
-			<br><br>
-			 This is one of the initial works of mine. This portfolio is a showcase of what I can do and help people to connect with me. I will add more content to it soon with time. Drop a respone in the 
+			I'm Prathamesh Punde, a student pursuing Diploma in Computer Engineering, a newbie in web development, and a tech addict.<br><br>
+
+			 This portfolio website is one of the initial works of mine. This was made to help people connect with me. I will add more content to it soon with time. Drop a respone in the 
 			 <a href="#section-5">Connect with me</a> 
-			 section below if you like my work or have any suggestions. I would love to hear from you!
+			 section below if you like my work or have any suggestions. Your response is valuable for me!
  		</p>
 
 	</div>
@@ -99,42 +114,43 @@
 	
 	<div class="odd-container" id="section-3" >
 		
-		<div class="titles" id="skills">PROGRAMMING SKILLS
+		<div class="titles fadeInBottom" id="skills">PROGRAMMING SKILLS
 			<div class="centerLine"></div>
 
 		</div>
 
-		<div class="boxes fadeIn">
+		<div class="boxes">
 		 	
-		 	<span>
+		 	<span class="fBoxes">
 
 		 		<img src="images/html5.png">
 				<section class="line"> </section>
 				<p>HTML 5</p>
 		 	</span>
 			
-			<span>
+			<span class="fBoxes">
 
 				<img src="images/css3.png">
 				<section class="line"> </section>
 				<p>CSS 3</p>
 			</span>
 
-			<span>
+			<span class="fBoxes">
 				
 				<img src="images/js.png">
 				<section class="line"> </section>
 				<p>JAVASCRIPT</p>
 			</span>
 
-			<span>
+			<span class="fBoxes">
 				
 				<img src="images/java.png">
 				<section class="line"> </section>
 				<p>JAVA</p>
 
 			</span>
-			<span>
+			
+			<span class="fBoxes">
 				
 				<img src="images/c++.png">
 				<section class="line"> </section>
@@ -148,12 +164,12 @@
 
 	<div class="even-container" id="section-4">
 		
-		<div class="titles" id="projects">PROJECTS
+		<div class="titles fadeInBottom" id="projects">PROJECTS
 			<div class="centerLine"></div>
 
 		</div>
 
-		<p class="coming_soon">
+		<p class="coming_soon fadeIn">
 			
 			<span id="coming">COMING</span>
 			<span id="soon">SOON</span>
@@ -166,12 +182,12 @@
 
 	<div class="odd-container" id="section-5" >
 		
-		<div class="titles" id="contact">CONNECT WITH ME
+		<div class="titles fadeInBottom" id="contact">CONNECT WITH ME
 			<div class="centerLine"></div>
 
 		</div>
 
-		<div class="container">
+		<div class="container fadeIn">
 
 			<form id="form">
 		
@@ -202,7 +218,7 @@
 
 	</div>
 
-	<div class="odd-container" id="section-6" >
+	<div class="footer-container" id="section-6" >
 
 		<div class="arrowup">
 			<a href="#home">
@@ -212,18 +228,45 @@
 			</a>
 		</div>	
 
-		<hr>
-		<footer>
+		<hr class="fadeIn">
+		<footer class="fadeIn">
 		
-		Developed and Designed by Prathamesh Punde.
-		Licensed under MIT.
-		&copy; 2020 Prathamesh Punde.
+		Developed&nbsp;and&nbsp;Designed&nbsp;by&nbsp;Prathamesh&nbsp;Punde.
+		Licensed&nbsp;under&nbsp;MIT.
+		&copy;&nbsp;2020&nbsp;Prathamesh&nbsp;Punde.
+		<a href="">
+			Source code.
+		</a>
+		
+		<img src="images/check.png" class="fetch">
+		<img src="images/cross.png" class="fetch">
 
 		</footer>
+	</div>	
+	
+	<script type="text/javascript">
 
-		
-		<script type="text/javascript">
-  		
+  		document.body.classList.add('js-loading');
+  		document.querySelector(".loader-wrapper, .loader, label").classList.add('js-lloading');
+
+		window.addEventListener("load", showPage);
+
+		function showPage() {
+		  document.body.classList.remove('js-loading');
+		}
+
+		(function($){
+        'use strict';
+        $(window).on('load', function () {
+        if ($(".loader-wrapper").length > 0)
+          {
+              $(".loader-wrapper").fadeOut("slow");
+          }
+       });
+    })(jQuery)	
+
+
+
   		emailjs.init('user_joXljjqqBz2oedqlRwY9U');
   		document
 				.querySelector("#form")
@@ -232,59 +275,89 @@
 
 					document.querySelector(
 									"#send"
-								).innerHTML = "Sending...";
+								).innerHTML = "Sending..."
 
-					var name1 = document
+					var uName = document
 						.querySelector("#form")
 						.getElementsByTagName("input")[0].value;
-					var email1 = document
+					var uEmail = document
 						.querySelector("#form")
 						.getElementsByTagName("input")[1].value;
-					var message1 = document
+					var uMessage = document
 						.querySelector("#form")
 						.getElementsByTagName("textarea")[0].value;
 
 					var element = document.getElementById("#send");
 
 					var templateParams = {
-						from_name: name1 ,
-						email: email1 ,
-						message: message1 ,
+						from_name: uName ,
+						email: uEmail ,
+						message: uMessage ,
 					};
 
-					emailjs
-						.send("service_z85sh8v", "template_lxn6ocl", templateParams)
-						.then(
-							function (response) {
-								console.log(
-									"SUCCESS!",
-									response.status,
-									response.text
-								);
+					emailjs.send("service_z85sh8v", "template_lxn6ocl", templateParams)
+							.then(
+								function (response) {
+									console.log(
+										"SUCCESS!",
+										response.status,
+										response.text
+									);
 
-								document.querySelector(
-									"#send"
-								).innerHTML = "✔️ Sent";
+									document.querySelector(
+										"#send"
+									).innerHTML = "<img id='done' src='images/check.png'> Sent";
 
-								document.getElementById("send").style.color = "#fff";
-								document.getElementById("send").style.backgroundColor = "#00e677";
-							},
-							function (error) {
-								console.log("FAILED...", error);
+									document.getElementById("send").style.color = "#10100a";
+									document.getElementById("send").style.backgroundColor = "#00e677";
 
-								document.querySelector(
-									"#send"
-								).innerHTML = "❌ Failed";
+    								$('#form').find(':input[type=submit]').prop('disabled', true);
+								},
+								function (error) {
+									console.log("FAILED...", error);
 
-								document.getElementById("send").style.color = "#fff";
-								document.getElementById("send").style.backgroundColor = "red";
-							}
-						);
-				});
+									document.querySelector(
+										"#send"
+									).innerHTML = "<img id='done' src='images/cross.png'> Failed";
+
+									document.getElementById("send").style.color = "#10100a";
+									document.getElementById("send").style.backgroundColor = "red";
+								}
+							);
+					});
+
+				
 		
+
+			var $animation_elements = $('.fadeIn, .fadeInBottom, .centerLine, .arrow, .arrowup, .fBoxes');
+			var $window = $(window);
+
+			function check_if_in_view() {
+ 			 var window_height = $window.height();
+ 			 var window_top_position = $window.scrollTop();
+ 			 var window_bottom_position = (window_top_position + window_height);
+ 
+  			$.each($animation_elements, function() {
+ 			   var $element = $(this);
+ 			  var element_height = $element.outerHeight();
+ 			   var element_top_position = $element.offset().top;
+   				 var element_bottom_position = (element_top_position + element_height);
+ 
+    //check to see if this current container is within viewport
+   		   if ((element_bottom_position >= window_top_position) &&
+  		      (element_top_position <= window_bottom_position)) {
+   			 	  $element.addClass('in-view');
+   				 }// else {
+    		//	  $element.removeClass('in-view');
+    		//	}
+  				});
+			}
+
+			$window.on('scroll resize', check_if_in_view);
+			$window.trigger('scroll');
+
+
+
 		</script>
-
-	</div>
-
 </body>
 </html>

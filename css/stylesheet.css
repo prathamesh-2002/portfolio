@@ -4,7 +4,91 @@
 	padding: 0;
 	scroll-behavior: smooth;
 	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
 }
+
+.js-loading *,
+.js-loading *:before, 
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+.js-lloading label, 
+.js-lloading label:before, 
+.js-lloading label:after {
+	animation-play-state: running !important;
+}
+
+.loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #10100a;
+	display: flex;
+	justify-content: center;
+}
+
+.loader {
+  top: 50%;
+  position: absolute;
+  color: #00e677;
+  text-align: center;
+}
+
+.loader label {
+  font-size: 20px;
+  opacity: 0;
+}
+
+@keyframes lol {
+  0% {
+    opacity: 0;
+    
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader label:nth-child(6) {
+  -webkit-animation: lol 2s infinite ease-in-out;
+  animation: lol 2s infinite ease-in-out;
+}
+
+.loader label:nth-child(5) {
+  -webkit-animation: lol 2s 100ms infinite ease-in-out;
+  animation: lol 2s 100ms infinite ease-in-out;
+}
+
+.loader label:nth-child(4) {
+  -webkit-animation: lol 3s 200ms infinite ease-in-out;
+  animation: lol 2s 200ms infinite ease-in-out;
+}
+
+.loader label:nth-child(3) {
+  -webkit-animation: lol 2s 300ms infinite ease-in-out;
+  animation: lol 2s 300ms infinite ease-in-out;
+}
+
+.loader label:nth-child(2) {
+  -webkit-animation: lol 2s 400ms infinite ease-in-out;
+  animation: lol 2s 400ms infinite ease-in-out;
+}
+
+.loader label:nth-child(1) {
+  -webkit-animation: lol 2s 500ms infinite ease-in-out;
+  animation: lol 2s 500ms infinite ease-in-out;
+}
+
 
 body {
 	text-align: center;
@@ -12,11 +96,14 @@ body {
 }
 
 .odd-container , .even-container {
-	height: 665px;
-	position: relative;
+	display: table; 
+	width: 100%;
+	height: 100vh;
+	min-height: 665px;
+
 }
 
-.odd-container {
+.odd-container, .footer-container {
 	background: #10100a;
 	color : #fff;
 
@@ -32,26 +119,37 @@ body {
 }
 
 img.profile { 
+	visibility: hidden;
 	height: 280px;
 	width: 280px;
 	border-radius: 50%;
 	margin: 7% 0 30px 0; 
 	box-shadow: 0px 5px 30px 10px black;
+	animation: fadeIn 1.5s forwards 0.4s;
 } 
 
 .titles{
+	visibility: hidden;
 	margin: 50px 100px; 
 	font-size: 39px;
 	font-family: "Exo 2", sans-serif;
 	font-weight: bold;
-	animation: fadeInBottom 2s forwards;
+}
 
+.tHome {
+	animation: fadeInBottom 2s forwards 0.4s;
+}
+
+.aHome {
+	animation: fadeIn 1s forwards;
+	animation-delay: 1.7s;
 }
 
 #name {
-	width: 305px;
+	width: 302px;
 	font-size: 31px;
 	margin: auto;
+	padding: 0;
 }
 
 .line {
@@ -61,35 +159,24 @@ img.profile {
 	position: relative;
 }
 
-.centerLine {
+.hCenterLine {
 	width: 100%;
 	visibility: hidden;
 	height: 3px;
 	background : #00e677;
-	position: relative;
+	animation: myMoveCenter 0.9s forwards;
+	animation-delay: 0.7s;
+}
+
+.centerLine.in-view {
+	width: 100%;
+	visibility: hidden;
+	height: 3px;
+	background : #00e677;
 	animation: myMoveCenter 0.9s forwards;
 	animation-delay: 0.3s;
 }
 
-.leftLine {
-	width: 100%;
-	visibility: hidden;
-	height: 3px;
-	background : #00e677;
-	position: relative;
-	animation: myMoveLeft 0.9s forwards;
-	animation-delay: 0.3s;
-}
-
-.rightLine {
-	width: 100%;
-	visibility: hidden;
-	height: 3px;
-	background : #00e677;
-	position: relative;
-	animation: myMoveRight 0.9s forwards;
-	animation-delay: 0.3s;
-}
 
 .subtitle {
 	opacity: 0;
@@ -103,6 +190,7 @@ img.profile {
 }
 
 .links a{
+
 	display: inline-block;
 	text-decoration: none;
 	height: 0;
@@ -111,11 +199,11 @@ img.profile {
 
 .links {
 	height: 124px;
+	visibility: hidden;
 }
 
 
 .icons {
-	visibility: hidden;
 	width: 35px;
 	height: 35px;
 	margin: 40px 8px;
@@ -123,8 +211,6 @@ img.profile {
 	padding: 7px;
 	border-radius: 50%;
 	box-shadow: 0px 1px 20px 5px black;
-	animation: fadeIn 1s forwards;
-	animation-delay: 1.3s;
 }
 
 /*Scroll down arrows*/
@@ -154,20 +240,7 @@ img.profile {
 .arrow span:nth-child(3){
     animation-delay: 2.0s;
 }
-@keyframes animates {
-    0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px,-20px);
-    	visibility: visible;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px,20px);
-    }
-}
+
 
 /* arrow-up */
 
@@ -179,7 +252,7 @@ img.profile {
     transform: translate(-50%,-50%);
 }
 
-.arrowup span{
+.arrowup.in-view span{
 	visibility: hidden;
 	display: block;
 	width: 20px;
@@ -189,34 +262,21 @@ img.profile {
     transform: rotate(-45deg);
     margin: -10px;
     animation: animatesup 2s infinite;
-    animation-delay: 2.0s;
+    animation-delay: 0.8s;
 }
 .arrowup span:nth-child(2){
-    animation-delay: 2.2s;
+    animation-delay: 1s;
 }
 .arrowup span:nth-child(3){
-    animation-delay: 2.4s;
+    animation-delay: 1.2s;
 }
-@keyframes animatesup {
-    0%{
-        opacity: 0;
-        transform: rotate(-135deg) translate(-50px,-50px);
-    	visibility: visible;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(-135deg) translate(-10px,-10px);
-    }
-}
+
 
 /*end of arrow css */
 
 /*About me */
 #aboutMe {
-	width: 200px;
+	width: 190px;
 	display: inline-block;
 	
 }
@@ -228,10 +288,9 @@ p.aboutMe{
 	word-spacing: 10px;
 	font-weight: 500;
 	text-align: justify;
-	margin: auto;
+	margin: auto auto 20px auto;
 	width: 50%;
-	animation: fadeIn 1s forwards;
-	animation-delay: 1s;
+	
 }
 
 .aboutMe a {
@@ -240,23 +299,26 @@ p.aboutMe{
 } 
 
 #skills {
-	width: 410px;
+	width: 405px;
 	display: inline-block;
 }
 
 div.boxes {
 	visibility: hidden;
-	animation: fadeIn 1s forwards;
-	animation-delay: 1.2s;
+
 }
 
 .boxes span{
 	display: inline-block;
 	background-color: #1a1a1a;
-	margin: 50px 25px 50px 25px;
+	margin: 50px 25px;
 	height: 300px;
 	width: 200px;
 	box-shadow: 2px 2px 10px black;
+}
+
+.fBoxes.in-view {
+	animation: fadeIn 1s forwards 0.8s;
 }
 
 .boxes img {
@@ -277,7 +339,7 @@ div.boxes {
 }
 
 #projects {
-	width: 200px;
+	width: 170px;
 	display: inline-block; 
 }
 
@@ -289,8 +351,6 @@ div.boxes {
 	font-family: "Exo 2", sans-serif;
 	font-weight: 300;
 	font-style: italic;
-	animation: fadeIn 1s forwards;
-	animation-delay: 1s;
 }
 
 
@@ -302,16 +362,13 @@ div.boxes {
 }
 
 #contact {
-	width: 355px;
-	display: inline-block;
-
+	width: 338px;
+	display: inline-block;S
 }
 
 .container {
 	padding: 0 30%;
 	visibility: hidden;
-	animation: fadeIn 1s forwards;
-	animation-delay: 1s;
 }
 
 input, textarea {
@@ -361,6 +418,11 @@ input:focus,textarea:focus {
 
 }
 
+#done {
+	height: 13px;
+	width: 13px;
+}
+
 .container p,.container a {
 	margin: 20px 0 0 0;
 	color: #e6e6e6;
@@ -374,28 +436,54 @@ input:focus,textarea:focus {
 	height: 100%;
 }
 
+.footer-container a {
+	color: #fff;
+	text-decoration: none;
+}
 
+.footer-container a:hover {
+	color: #ccc;
+}
 
 footer, hr {
 	visibility: hidden;
-	padding: 20px 0;
-	animation: fadeIn 1s forwards;
-	animation-delay: 1s;
+	padding: 20px 10px;
 }
 
 hr {
+	visibility: hidden;
 	padding: 0;
 	margin-top: 10%;
 	color: #ccc;
 }
 
-.fadeIn {
+.fetch {
 	visibility: hidden;
-	animation: fadeIn 1.5s forwards;
+	height: 0;
+	width: 0;
+
 }
 
-.fadeInBottom {
-	animation: fadeInBottom 1.8s forwards;
+.fadeIn.in-view {
+	visibility: hidden;
+	animation: fadeIn 1.5s forwards;
+	animation-delay: 0.8s;
+}
+
+.fadeInBottom.in-view {
+	animation: fadeInBottom 1.4s forwards;
+}
+
+@keyframes loading {
+	0% {
+		transform: scaleX(1);
+	}
+	50%{
+		transform: scaleX(0.5);
+	}
+	100%{
+		transform: scaleX(1);
+	}
 }
 
 @keyframes fadeIn {
@@ -414,17 +502,9 @@ hr {
 		transform: translateY(150%);
 	}
 	to {
-		
+		visibility: visible;
 		opacity: 1;
 	}
-}
-
-@keyframes myMoveLeft {
-  from {width: 0px;}
-  to {
-  	visibility: visible;
-  	width: 60%;
-  }
 }
 
 @keyframes myMoveCenter{
@@ -438,14 +518,175 @@ hr {
 	}
 }
 
-@keyframes myMoveRight {
-  from {
-  	left: 100%;
-  	width: 0;
-  }
-  to {
-  	visibility: visible;
-  	left: 40%;
-  	width: 60%;
-  }
+@keyframes animates {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    	visibility: visible;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+@keyframes animatesup {
+    0%{
+        opacity: 0;
+        transform: rotate(-135deg) translate(-50px,-50px);
+    	visibility: visible;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(-135deg) translate(-10px,-10px);
+    }
+}
+
+@media (max-width: 576px) {
+	
+	.odd-container , .even-container {
+		display: table; 
+		width: 100%;
+		height: 100vh;
+		min-height: 665px;
+	}
+
+	img.profile {
+		height: 240px;
+		width: 240px;
+		margin-top: 35%;
+
+	}
+
+	.arrow {
+		margin: 10% auto;
+	}
+
+	#name {
+		font-size: 26px;
+		width: 255px;
+	}
+
+	.titles {
+		font-size: 29px;
+		margin: 50px auto 0 auto;
+	}
+
+	.subtitle {
+		font-size: 18px;
+	}
+
+	#aboutMe {
+		width: 140px;
+	}
+
+	p.aboutMe {
+		margin: 25% auto;
+		width: 75%;
+		font-size: 20px;
+	}
+
+	#skills {
+		font-size: 29px;
+		width: 300px;
+	}	
+
+	.boxes span {
+		height: 180px;
+		width: 130px;
+		margin: 20px 15px;
+	}
+
+	.boxes {
+		margin: 20px auto;
+	}
+
+	.fBoxes.in-view {
+		animation-delay: 0.4s;
+	} 
+
+	.boxes img {
+		height: 90px;
+		width: 90px;
+		margin: 20px auto; 
+	}	
+
+	.boxes p {
+		font-size: 14px;
+	}
+
+	#projects {
+		width: 130px;
+	}
+
+	.coming_soon {
+		font-size: 45px;
+		margin: 245px auto;
+	}
+
+	#contact {
+		font-size: 29px;
+		width: 251px;
+		margin: 50px auto;
+	}
+
+	.container {
+		padding: 0 12%;
+		margin: 10% auto;
+	}
+
+	#section-6 {
+		min-height: 100%;
+	}
+
+	.arrowup {
+		margin: 10px auto 30px auto;
+	}
+
+	footer {
+		font-size: 12px;
+		padding: auto 12%;
+	}
+}
+
+@media (min-height: 800px) and (max-width: 576px){
+
+	img.profile {
+		margin-top: 50%; 
+	}
+
+	.titles {
+		padding-top: 20px;
+	}
+
+	.arrow {
+		margin: 10% auto;
+	}
+
+	p.aboutMe {
+		font-size: 21px;
+		margin:30% auto;
+	}
+
+	.boxes {
+		margin: 10% auto;
+	}
+
+	.boxes span {
+		margin: 25px 15px;
+	}
+
+	.coming_soon {
+		margin: 330px auto;
+	}
+
+	.container {
+		margin: 20% auto;
+	}
 }
