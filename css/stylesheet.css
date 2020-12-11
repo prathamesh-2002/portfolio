@@ -449,12 +449,10 @@ input:focus,textarea:focus {
 }
 
 footer, hr {
-	visibility: hidden;
 	padding: 20px 10px;
 }
 
 hr {
-	visibility: hidden;
 	padding: 0;
 	margin-top: 10%;
 	color: #ccc;
