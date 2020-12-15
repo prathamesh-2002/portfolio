@@ -13,7 +13,7 @@
 .js-loading *,
 .js-loading *:before, 
 .js-loading *:after {
-  animation-play-state: paused !important;
+	animation-play-state: paused !important;
 }
 
 .js-lloading label, 
@@ -34,61 +34,61 @@
 }
 
 .loader {
-  top: 50%;
-  position: absolute;
-  color: #00e677;
-  text-align: center;
+	top: 50%;
+	position: absolute;
+	color: #00e677;
+	text-align: center;
 }
 
 .loader label {
-  font-size: 20px;
-  opacity: 0;
+	font-size: 20px;
+	opacity: 0;
 }
 
 @keyframes lol {
-  0% {
-    opacity: 0;
+ 	0% {
+		opacity: 0;
     
-  }
-  33% {
-    opacity: 1;
-  }
-  66% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 .loader label:nth-child(6) {
-  -webkit-animation: lol 2s infinite ease-in-out;
-  animation: lol 2s infinite ease-in-out;
+	-webkit-animation: lol 2s infinite ease-in-out;
+	animation: lol 2s infinite ease-in-out;
 }
 
 .loader label:nth-child(5) {
-  -webkit-animation: lol 2s 100ms infinite ease-in-out;
-  animation: lol 2s 100ms infinite ease-in-out;
+	-webkit-animation: lol 2s 100ms infinite ease-in-out;
+	animation: lol 2s 100ms infinite ease-in-out;
 }
 
 .loader label:nth-child(4) {
-  -webkit-animation: lol 3s 200ms infinite ease-in-out;
-  animation: lol 2s 200ms infinite ease-in-out;
+	-webkit-animation: lol 3s 200ms infinite ease-in-out;
+	animation: lol 2s 200ms infinite ease-in-out;
 }
 
 .loader label:nth-child(3) {
-  -webkit-animation: lol 2s 300ms infinite ease-in-out;
-  animation: lol 2s 300ms infinite ease-in-out;
+	-webkit-animation: lol 2s 300ms infinite ease-in-out;
+	animation: lol 2s 300ms infinite ease-in-out;
 }
 
 .loader label:nth-child(2) {
-  -webkit-animation: lol 2s 400ms infinite ease-in-out;
-  animation: lol 2s 400ms infinite ease-in-out;
+	-webkit-animation: lol 2s 400ms infinite ease-in-out;
+	animation: lol 2s 400ms infinite ease-in-out;
 }
 
 .loader label:nth-child(1) {
-  -webkit-animation: lol 2s 500ms infinite ease-in-out;
-  animation: lol 2s 500ms infinite ease-in-out;
+	-webkit-animation: lol 2s 500ms infinite ease-in-out;
+	animation: lol 2s 500ms infinite ease-in-out;
 }
 
 
