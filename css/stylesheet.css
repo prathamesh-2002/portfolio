@@ -699,9 +699,3 @@ hr {
 		margin: 20% auto;
 	}
 }
-
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  .titles {
-    font-size: 39px;      
-    }
-}
