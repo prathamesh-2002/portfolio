@@ -149,6 +149,7 @@ img.profile {
 
 #name {
 	width: 302px;
+	font-size-adjust: 0.47;
 	font-size: 31px;
 	margin: auto;
 	padding: 0;
@@ -280,6 +281,7 @@ img.profile {
 #aboutMe {
 	width: 190px;
 	display: inline-block;
+	font-size-adjust: 0.46;
 	
 }
 
@@ -303,11 +305,11 @@ p.aboutMe{
 #skills {
 	width: 405px;
 	display: inline-block;
+	font-size-adjust: 0.46;
 }
 
 div.boxes {
 	visibility: hidden;
-
 }
 
 .boxes span{
@@ -343,6 +345,7 @@ div.boxes {
 #projects {
 	width: 170px;
 	display: inline-block; 
+	font-size-adjust: 0.46;
 }
 
 .coming_soon {
@@ -365,7 +368,8 @@ div.boxes {
 
 #contact {
 	width: 338px;
-	display: inline-block;S
+	display: inline-block;
+	font-size-adjust: 0.46;
 }
 
 .container {
@@ -694,4 +698,10 @@ hr {
 	.container {
 		margin: 20% auto;
 	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  .titles {
+    font-size: 39px;      
+    }
 }
