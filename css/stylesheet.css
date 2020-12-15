@@ -220,28 +220,28 @@ img.profile {
 .arrow{
 	display: inline-block;
 	margin-top: 5px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .arrow span{
 	visibility: hidden;
 	display: block;
 	width: 20px;
-    height: 20px;
-    border-bottom: 5px solid #00e677;
-    border-right: 5px solid #00e677;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animates 2s infinite;
-    animation-delay: 2.4s;
+	height: 20px;
+	border-bottom: 5px solid #00e677;
+	border-right: 5px solid #00e677;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animates 2s infinite;
+	animation-delay: 2.4s;
 }
 .arrow span:nth-child(2){
-    animation-delay: 2.2s;
+	animation-delay: 2.2s;
 }
 .arrow span:nth-child(3){
-    animation-delay: 2.0s;
+	animation-delay: 2.0s;
 }
 
 
@@ -250,28 +250,28 @@ img.profile {
 .arrowup{
 	display: inline-block;
 	margin-top: 5px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .arrowup.in-view span{
 	visibility: hidden;
 	display: block;
+	height: 20px;
 	width: 20px;
-    height: 20px;
-    border-bottom: 5px solid #00e677;
-    border-right: 5px solid #00e677;
-    transform: rotate(-45deg);
-    margin: -10px;
-    animation: animatesup 2s infinite;
-    animation-delay: 0.8s;
+	border-bottom: 5px solid #00e677;
+	border-right: 5px solid #00e677;
+	transform: rotate(-45deg);
+	margin: -10px;
+	animation: animatesup 2s infinite;
+	animation-delay: 0.8s;
 }
 .arrowup span:nth-child(2){
-    animation-delay: 1s;
+	animation-delay: 1s;
 }
 .arrowup span:nth-child(3){
-    animation-delay: 1.2s;
+	animation-delay: 1.2s;
 }
 
 
