@@ -91,8 +91,11 @@
 	animation: lol 2s 500ms infinite ease-in-out;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ea0a868b1b55c2c686be5b44bab6817395fd5a7e
 body {
 	text-align: center;
 	font-family: "Exo 2",sans-serif;
@@ -698,5 +701,29 @@ hr {
 
 	.container {
 		margin: 20% auto;
+	}
+}
+
+@media (min-width: 800px){
+	/*Scroll-bar*/
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #00e677;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background: #00be62;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #10100a;
+	}
+
+	::-webkit-scrollbar-track:hover {
+		background: #1a1a1a;
 	}
 }
