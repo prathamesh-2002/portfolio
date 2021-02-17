@@ -112,8 +112,8 @@ body {
 }
 
 .even-container {
-	background: #fff;
-	color: #10100a;
+	background: #0c0d0d;
+	color: #fff;
 }
 
 #home {
@@ -295,7 +295,7 @@ p.aboutMe{
 }
 
 .aboutMe a {
-	color: #1a1a1a;
+	color: #adadad;
 	text-decoration: none;
 } 
 
@@ -345,7 +345,7 @@ div.boxes {
 	visibility: hidden;
 	margin-top: 120px;
 	font-size: 100px;
-	color: #666;
+	color: rgb(160, 160, 160);
 	font-family: "Exo 2", sans-serif;
 	font-weight: 300;
 	font-style: italic;
