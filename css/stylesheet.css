@@ -302,9 +302,9 @@ p.aboutMe{
 } 
 
 #skills {
-	width: 405px;
+	width: auto;
 	display: inline-block;
-	font-size-adjust: 0.46;
+
 }
 
 div.boxes {
