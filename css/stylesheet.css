@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
+	user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
@@ -299,13 +300,7 @@ p.aboutMe{
 } 
 
 #skills {
-<<<<<<< HEAD
-	width: auto;
-	display: inline-block;
-
-=======
 	width: auto; 
->>>>>>> main
 }
 
 div.boxes {
