@@ -274,7 +274,6 @@ img.profile {
 	animation-delay: 1.2s;
 }
 
-
 /*end of arrow css */
 
 /*About me */
@@ -450,7 +449,7 @@ footer, hr {
 hr {
 	padding: 0;
 	margin-top: 10%;
-	color: #ccc;
+	border-color: #ccc;
 }
 
 .fetch {
