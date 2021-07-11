@@ -11,4 +11,3 @@
 ##### Leave a response on the site if you have any suggestions!       <br /><br />
 
 ###### Note: The site is under development. Best viewed in chrome. Report if you find any issues.<br />
-###### Known issues: Font size issues in the Instagram in-app browser on some 16:9 ratio devices.
