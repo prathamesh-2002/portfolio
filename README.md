@@ -11,4 +11,4 @@
 
 ##### Leave a response on the site if you have any suggestions!       <br /><br />
 
-###### Note: The site is under development. Best viewed in chrome. Report if you find any issues.<br />
+###### Report if you find any issues.<br />
