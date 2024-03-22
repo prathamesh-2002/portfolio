@@ -135,7 +135,7 @@ img.profile {
 	display: inline-block;
 	visibility: hidden;
 	margin: 50px 100px; 
-	font-size: 39px;
+	font-size: 32px;
 	font-family: "Exo 2", sans-serif;
 	font-weight: bold;
 }
@@ -151,7 +151,7 @@ img.profile {
 
 #name {
 	width: auto;
-	font-size: 31px;
+	font-size: 28px;
 	margin: auto;
 	padding: 0;
 }
@@ -181,8 +181,7 @@ img.profile {
 	animation-delay: 0.3s;
 }
 
-
-.subtitle {
+.sub {
 	opacity: 0;
 	margin-top: 5px; 
 	font-family: 'Source Code Pro' , mono space;
@@ -190,7 +189,7 @@ img.profile {
 	font-size: 18px;
 	color: #e6e6e6;
 	animation: fadeIn 1s forwards;
-	animation-delay: 1.3s;
+	animation-delay: 2s;
 }
 
 .links a{
@@ -284,9 +283,9 @@ img.profile {
 
 p.aboutMe{
 	visibility: hidden;
-	font-size: 23px; 
+	font-size: 20px; 
 	font-family: "Exo 2",sans-serif;
-	word-spacing: 10tpx;
+	word-spacing: px;
 	font-weight: 500;
 	text-align: justify;
 	margin: auto auto 20px auto;
@@ -311,40 +310,61 @@ p.aboutMe{
 	width: auto; 
 }
 
-div.boxes {
-	visibility: hidden;
+.skills-section-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 50px;
 }
 
-.boxes span {
-	display: inline-block;
-	background-color: #1a1a1a;
-	margin: 50px 25px;
-	height: 300px;
-	width: 200px;
-	border-radius: 6px;
-	box-shadow: 2px 2px 10px black;
+.card { 
+  display: flex;
+  flex-direction: row;
+
+  border: 1px solid rgb(36, 36, 36);
+  border-radius: 10px;
+  padding: 30px;
+  align-items: center;
+  height: 90px;
+  width: 340px; 
+  transition: 0.3s;
 }
 
-.fBoxes.in-view {
-	animation: fadeIn 1s forwards 0.8s;
+.card:hover {
+	box-shadow: 0.5px 0.5px 8px var(--accent-color);
 }
 
-.boxes img {
-	height: 150px;
-	width: 150px;
-	margin: 30px;
+.skill-logo {
+  margin-right: 18px;
+  width: 30px;
 }
 
-.boxes section {
-	width: 70%;
-	margin: 5% 15%;
+.skill-logo img {
+  width: 100%;  
 }
 
-.boxes p {
-	font-family: sans-serif;
-	font-size: 24px;
-	font-weight: bold;
+.skill-description {
+	text-align: left;
 }
+
+.skill-title {
+  font-weight: 600;
+  font-size: 20px; 
+}
+
+.skill-desc {
+  font-size: 16px;
+}
+.growing {
+	font-size: 20px;
+	font-style: italic;
+}
+
+
+/* Skills sections ends */
 
 #projects {
 	width: auto;
@@ -444,8 +464,9 @@ input, textarea {
 	border-radius: 6px;
 	box-shadow: 5px 5px 10px black; 
 	transition: 0.3s;
-	outline: none;
-	
+	outline: none;	
+	font-family: 'Source Code Pro' , mono space;
+
 }
 
 textarea {
@@ -658,39 +679,21 @@ hr {
 		font-size: 29px;
 	}	
 
-	.boxes span {
-		height: 180px;
-		width: 130px;
-		margin: 20px 15px;
+	.skills-section-cards {
+		gap: 25px;
 	}
 
-	.boxes {
-		margin: 20px auto;
+	.card {
+		min-width: 310px;
+		width: 100%;
 	}
 
-	.fBoxes.in-view {
-		animation-delay: 0.4s;
-	} 
-
-	.boxes img {
-		height: 90px;
-		width: 90px;
-		margin: 20px auto; 
-	}	
-
-	.boxes p {
-		font-size: 15px;
+	.skill-title {
+		font-size: 18px;
 	}
 
-	.pBoxes span {
-		margin: 150px auto;
-		width: 280px;
-		height: auto;
-	}
-
-	.pBoxes img {
-		width: 280px;
-		height: 200px;
+	.skill-desc {
+		font-size: 14px;
 	}
 
 	.pTitles {
@@ -706,11 +709,6 @@ hr {
 	img.pIcons{
 		height: 35px;
 		width: 35px;
-	}
-
-	.coming_soon {
-		font-size: 45px;
-		margin: 245px auto;
 	}
 
 	#contact {
@@ -760,18 +758,6 @@ hr {
 		margin:30% auto;
 	}
 
-	.boxes {
-		margin: 10% auto;
-	}
-
-	.boxes span {
-		margin: 25px 15px;
-	}
-
-	.coming_soon {
-		margin: 330px auto;
-	}
-
 	.container {
 		margin: 20% auto;
 	}
@@ -789,7 +775,7 @@ hr {
 	}
 
 	::-webkit-scrollbar-thumb:active {
-		background: #00b1be;
+		background: #927451;
 	}
 
 	::-webkit-scrollbar-track {
