@@ -310,6 +310,11 @@ p.aboutMe{
 	width: auto; 
 }
 
+.fBoxes.in-view {
+	animation: fadeIn 1s forwards 0.8s;
+}
+
+
 .skills-section-cards {
   display: flex;
   flex-direction: row;
@@ -696,6 +701,17 @@ hr {
 		font-size: 14px;
 	}
 
+	.pBoxes span {
+		margin: 150px auto;
+		width: 280px;
+		height: auto;
+	}
+
+	.pBoxes img {
+		width: 280px;
+		height: 200px;
+	}
+
 	.pTitles {
 		font-family: sans-serif;
 		font-size: 20px;
@@ -709,6 +725,11 @@ hr {
 	img.pIcons{
 		height: 35px;
 		width: 35px;
+	}
+
+	.coming_soon {
+		font-size: 45px;
+		margin: 245px auto;
 	}
 
 	#contact {
