@@ -310,25 +310,20 @@ p.aboutMe{
 	width: auto; 
 }
 
-.fBoxes.in-view {
-	animation: fadeIn 1s forwards 0.8s;
-}
-
-
 .skills-section-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  justify-content: center;
-  gap: 50px;
-  padding-bottom: 50px;
+	visibility: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 40px;
+	justify-content: center;
+	gap: 50px;
+	padding-bottom: 50px;
 }
 
 .card { 
   display: flex;
   flex-direction: row;
-
   border: 1px solid rgb(36, 36, 36);
   border-radius: 10px;
   padding: 30px;
@@ -364,6 +359,7 @@ p.aboutMe{
   font-size: 16px;
 }
 .growing {
+	visibility: hidden;
 	font-size: 20px;
 	font-style: italic;
 }
@@ -390,6 +386,10 @@ p.aboutMe{
 	font-family: "Avenir next";
 	font-weight: bold;
 	color: var(--accent-color);
+}
+
+.fBoxes.in-view {
+	animation: fadeIn 1s forwards 0.8s;
 }
 
 div.pBoxes {
