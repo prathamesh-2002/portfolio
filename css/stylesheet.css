@@ -26,6 +26,7 @@
 
 .loader-wrapper {
 	position: fixed;
+	z-index: 100;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -91,6 +92,91 @@
 .loader label:nth-child(1) {
 	-webkit-animation: lol 2s 500ms infinite ease-in-out;
 	animation: lol 2s 500ms infinite ease-in-out;
+}
+
+/* Status badge */
+
+.status-badge {
+    position: fixed;
+    z-index:50;
+    top: 24px;
+    right: 24px;
+    padding: 10px 16px;
+	border-radius: 10px;
+    background: rgba(26, 26, 26, 1);
+    backdrop-filter: blur(40px);
+    color: white;
+    font-family: "Exo 2",sans-serif;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.status-badge .subcontent {
+	font-weight: normal;
+}
+
+.status-badge:hover {
+    padding: 16px;
+}
+
+.status-dot {
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    border-radius: 50%;
+    /*background: #4ade80;*/
+    background: var(--accent-color);
+    margin-right: 10px;
+    animation: pulse 3s infinite;
+ }
+
+.status-content {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.expanded-content {
+    display: none;
+    width: 200px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.status-badge:hover .status-content {
+    display: none;
+}
+
+.status-badge:hover .expanded-content {
+    display: inline-block; 
+}
+
+.status-badge:hover {
+   	display: flex;
+}
+
+.status-badge:hover .status-dot {
+   	margin-top: 5px;
+    margin-right: 15px;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+    
+.fade {
+	animation: fadeIn 0.5s;
 }
 
 body {
@@ -184,7 +270,7 @@ img.profile {
 .sub {
 	opacity: 0;
 	margin-top: 5px; 
-	font-family: 'Source Code Pro' , mono space;
+	font-family: 'Source Code Pro', mono space;
 	font-weight: 300;
 	font-size: 18px;
 	color: #e6e6e6;
@@ -283,7 +369,8 @@ img.profile {
 
 p.aboutMe{
 	visibility: hidden;
-	font-size: 20px; 
+	font-size: 18px; 
+	line-height: 1.6;
 	font-family: "Exo 2",sans-serif;
 	word-spacing: px;
 	font-weight: 500;
@@ -315,7 +402,7 @@ p.aboutMe{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin-top: 40px;
+	margin: 40px 20px 0 20px;
 	justify-content: center;
 	gap: 50px;
 	padding-bottom: 50px;
@@ -345,18 +432,19 @@ p.aboutMe{
 .skill-logo img {
   width: 100%;  
 }
-
+	
 .skill-description {
 	text-align: left;
 }
 
 .skill-title {
   font-weight: 600;
-  font-size: 20px; 
+  font-size: 18px; 
 }
 
 .skill-desc {
-  font-size: 16px;
+	margin-top: 4px;
+  	font-size: 14px;
 }
 .growing {
 	visibility: hidden;
@@ -671,7 +759,7 @@ hr {
 	p.aboutMe {
 		margin: 15% auto 10% auto;
 		width: 80%;
-		font-size: 18px;
+		font-size: 16px;
 	}
 
 	.toons {
