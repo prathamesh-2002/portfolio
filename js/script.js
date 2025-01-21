@@ -1,7 +1,7 @@
 const messages = [
   'Last updated: March 23, 2024',
   'Updates in progress...',
-  'Next update: January 25, 2025',
+  'Next update: January 2025, 2025',
   
 ];
 
