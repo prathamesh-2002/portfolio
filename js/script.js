@@ -1,8 +1,6 @@
 const messages = [
-  'Last updated: March 23, 2024',
+  'Last updated: February 5, 2025',
   'Updates in progress...',
-  'Next update: January 2025, 2025',
-  
 ];
 
 const statusContent = document.querySelector('.status-content');
