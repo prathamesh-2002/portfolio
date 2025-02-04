@@ -483,12 +483,9 @@ p.aboutMe{
 
 /* projects start */
 
-.project-card.in-view {
-	visibility: hidden;
-	animation: fadeIn 1s forwards 0.8s;
-}
 
 .project-card {
+	visibility: hidden;
 	overflow: hidden;
 	width: 450px;
 	margin: 0 auto;
