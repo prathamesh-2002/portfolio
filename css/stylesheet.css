@@ -482,18 +482,25 @@ p.aboutMe{
 
 
 /* projects start */
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	margin: 0 50px;
+	justify-content: center;
+}
 
 
 .project-card {
 	visibility: hidden;
 	overflow: hidden;
 	width: 450px;
-	margin: 0 auto;
     background: rgba(26, 26, 26, 1);
 	border: 1px solid rgb(36, 36, 36);
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px black;
 	transition: 0.3s;
+
 }
 
 .project-card:hover {
@@ -861,10 +868,12 @@ hr {
 		font-size: 14px;
 	}
 
+	.projects {
+		margin: 50px auto;
+	}
 
 	.project-card {
 		width: 280px;
-		margin: 50px auto;
 	}
 
 	.project-image img{
