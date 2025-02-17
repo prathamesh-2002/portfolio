@@ -12,6 +12,11 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
+/* For browsers with rubber-band scroll */
+html {
+	background: #0c0d0d;
+}
+
 .js-loading *,
 .js-loading *:before, 
 .js-loading *:after {
